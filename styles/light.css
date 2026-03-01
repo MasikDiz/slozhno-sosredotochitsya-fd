@@ -9,4 +9,107 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --page-background-image: url(../images/cover-image-light.png);
+  --page-background-color: #fff1f7;
+  --decor-color: #353430;
+  --accent-color: #ff8dcb;
+  --title-color: #ffc2e6;
+  --text-color: #353430;
+}
+
+.theme-light {
+  .decorated-zone::before {
+    border-color: var(--decor-color, #353430);
+  }
+
+  .decorated-zone::after {
+    border-color: var(--decor-color, #353430);
+  }
+
+  .decorated-element {
+    display: none;
+  }
+
+  .header__theme-menu-button {
+    color: var(--decor-color, #353430);
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-block-end: 1px solid currentColor;
+  }
+
+  .header__theme-menu-button:hover {
+    outline: 1px solid rgb(50 49 45 / 0.4);
+  }
+
+  .header__theme-menu-button_active {
+    outline: 1px solid currentColor;
+    pointer-events: none; 
+  }
+
+  .section__heading {
+    color: var(--text-color, #353430);
+  }
+
+  .card-text__link:focus-visible {
+    outline: 1px solid currentColor;
+  }
+
+  .card-text__link:hover {
+    border-block-end: 1px solid currentColor;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --page-background-image: url(../images/cover-image-light.png);
+    --page-background-color: #fff1f7;
+    --decor-color: #353430;
+    --accent-color: #ff8dcb;
+    --title-color: #ffc2e6;
+    --text-color: #353430;
+  }
+
+  .theme-auto {
+    .decorated-zone::before {
+      border-color: var(--decor-color, #353430);
+    }
+
+    .decorated-zone::after {
+      border-color: var(--decor-color, #353430);
+    }
+
+    .decorated-element {
+      display: none;
+    }
+
+    .header__theme-menu-button {
+      color: var(--decor-color, #353430);
+    }
+
+    .header__theme-menu-button:focus-visible {
+      border-block-end: 1px solid currentColor;
+    }
+
+    .header__theme-menu-button:hover {
+      outline: 1px solid rgb(50 49 45 / 0.4);
+    }
+
+    .header__theme-menu-button_active {
+      outline: 1px solid currentColor;
+      pointer-events: none;
+    }
+
+    .section__heading {
+      color: var(--text-color, #353430);
+    }
+
+    .card-text__link:focus-visible {
+      outline: 1px solid currentColor;
+    }
+
+    .card-text__link:hover {
+      border-block-end: 1px solid currentColor;
+    }
+  }
 }
