@@ -2,3 +2,35 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --page-background-image: url(../images/cover-image-dark.png);
+  --main-font: "IBM Plex Mono";
+  --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --text-size: 1.125rem;
+  --header-footer__min-block-size: 41.75rem;
+  --header__text-block__inline-size: clamp(22.1875rem, 21.6508rem + 2.2901vw, 22.75rem);
+  --section-padding-inline: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem); 
+  --accent-color: rgba(255, 0, 112, 1);
+  --button-padding: 0 0.8125rem;
+  --theme-menu-padding-top: clamp(1.5625rem, -5.2958rem + 29.2621vw, 8.75rem);
+  --title-line-height: 83%;
+  --text-line-height: 130%; 
+  --button-line-height: 100%;
+  --link-line-height: 100%;
+  --page-background-color: #000028;
+  --decor-color: #000028;
+  --accent-color: #ff0070;
+  --title-color: #db00ff;
+  --text-color: #f1b2ce;
+  --regular-font-weight: 400;
+  --bold-font-weight: 700;
+  --page-gap: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
+  --main-gap: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem);
+  --section-gap: 1.25rem;
+  --section-card-gap: 0.625rem;
+  --theme-menu-gap: 0.625rem;
+  --gallary-gap: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem); 
+  --gallary__list-gap: 0.625rem;
+  --decorated-offset: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  --decorated-element-right: clamp(2.4375rem, 1.8411rem + 2.5445vw, 3.0625rem);
+}
