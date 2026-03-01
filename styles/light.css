@@ -44,7 +44,7 @@
 
   .header__theme-menu-button_active {
     outline: 1px solid currentColor;
-    pointer-events: none; 
+    pointer-events: none;
   }
 
   .section__heading {
