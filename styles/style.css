@@ -251,9 +251,9 @@
 }
 
 @media (768px <= width < 1024px) {
-  .header,
+  .header, 
   .footer {
-    --header-footer__min-block-size: 64rem; 
+    --header-footer__min-block-size: 64rem;
     min-block-size: var(--header-footer__min-block-size, 64rem);
   }
 
