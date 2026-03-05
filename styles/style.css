@@ -2,14 +2,15 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  display: flex;
-  flex-direction: column;
+  /*display: flex;
+  flex-direction: column;*/
   gap: var(--page-gap, clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem));
   font-family: var(--main-font, "IBM Plex Mono"), monospace;
   background-color: var(--page-background-color, #000028);
   background-image: var(--page-background-image, url(../images/cover-image-dark.png));
   background-size: cover;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .title-general-styles {
@@ -146,6 +147,7 @@
   grid-row: 2;
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
   align-self: center;
+  margin-left: -15px;
 }
 
 .header__text {
@@ -156,11 +158,102 @@
   margin-block-end: clamp(1.5625rem, -5.2958rem + 29.2621vw, 8.75rem);
 }
 
+.theme-light {
+  .decorated-zone::before {
+    border-color: var(--decor-color, #353430);
+  }
+
+  .decorated-zone::after {
+    border-color: var(--decor-color, #353430);
+  }
+
+  .decorated-element {
+    display: none;
+  }
+
+  .header__theme-menu-button {
+    color: var(--decor-color, #353430);
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-block-end: 1px solid currentColor;
+  }
+
+  .header__theme-menu-button:hover {
+    outline: 1px solid rgb(50 49 45 / 0.4);
+  }
+
+  .header__theme-menu-button_active {
+    outline: 1px solid currentColor;
+    pointer-events: none;
+  }
+
+  .section__heading {
+    color: var(--text-color, #353430);
+  }
+
+  .card-text__link:focus-visible {
+    outline: 1px solid currentColor;
+  }
+
+  .card-text__link:hover {
+    border-block-end: 1px solid currentColor;
+  }
+}
+
+.theme-auto {
+  .decorated-zone::before {
+    border-color: var(--decor-color, #353430);
+  }
+
+  .decorated-zone::after {
+    border-color: var(--decor-color, #353430);
+  }
+
+  .decorated-element {
+    display: none;
+  }
+
+  .header__theme-menu-button {
+    color: var(--decor-color, #353430);
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-block-end: 1px solid currentColor;
+  }
+
+  .header__theme-menu-button:hover {
+    outline: 1px solid rgb(50 49 45 / 0.4);
+  }
+
+  .header__theme-menu-button_active {
+    outline: 1px solid currentColor;
+    pointer-events: none;
+  }
+
+  .section__heading {
+    color: var(--text-color, #353430);
+  }
+
+  .card-text__link:focus-visible {
+    outline: 1px solid currentColor;
+  }
+
+  .card-text__link:hover {
+    border-block-end: 1px solid currentColor;
+  }
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
   gap: var(--main-gap, clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem));
   padding-inline: var(--section-padding-inline, clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem));
+}
+
+.header, 
+.main-content {
+  margin-bottom: var(--page-gap);
 }
 
 .section {
@@ -238,16 +331,22 @@
 }
 
 .footer {
-  block-size: 100vh;
-  min-block-size: var(--header-footer__min-block-size, 41.75rem);
-  display: flex;
-  justify-content: center;
+  position: relative;
+  height: 100vh;
+  min-height: 668px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
-  padding-inline: var(--section-padding-inline, clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem));
+  justify-content: center;
+  display: grid;
+  margin-block-start: 32px;
+  padding: 10px;
 }
 
 .footer__title {
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
+  justify-self: center;
+  align-self: center;
 }
 
 @media (768px <= width < 1024px) {
@@ -312,7 +411,6 @@
 
 @media (width >= 768px) {
   .header__cover-title {
-    position: relative;
     inset-inline-end: var(--section-padding-inline);
   }
 
