@@ -13,7 +13,7 @@
   --accent-color: rgba(255, 0, 112, 1);
   --button-padding: 0 0.8125rem;
   --theme-menu-padding-top: clamp(1.5625rem, -5.2958rem + 29.2621vw, 8.75rem);
-  --title-line-height: 83%;
+  --title-line-height: 82.5%;
   --text-line-height: 130%;
   --button-line-height: 100%;
   --link-line-height: 100%;
@@ -29,8 +29,8 @@
   --section-gap: 1.25rem;
   --section-card-gap: 0.625rem;
   --theme-menu-gap: 0.625rem;
-  --gallary-gap: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
-  --gallary__list-gap: 0.625rem;
+  --gallery-gap: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  --gallery__list-gap: 0.625rem;
   --decorated-offset: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   --decorated-element-right: clamp(2.4375rem, 1.8411rem + 2.5445vw, 3.0625rem);
 }
