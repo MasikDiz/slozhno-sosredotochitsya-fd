@@ -2,22 +2,24 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  /*display: flex;
+  /*display: grid;
   flex-direction: column;*/
   gap: var(--page-gap, clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem));
   font-family: var(--main-font, "IBM Plex Mono"), monospace;
   background-color: var(--page-background-color, #000028);
   background-image: var(--page-background-image, url(../images/cover-image-dark.png));
   background-size: cover;
+  height: 100vh;
   background-attachment: fixed;
-  overflow-x: hidden;
+  background-position: bottom;
+  /*overflow-x: hidden;*/ /*не использовать!*/ 
 }
 
 .title-general-styles {
   font-family: inherit;
   font-weight: var(--bold-font-weight, 700);
   font-size: var(--title-size, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
-  line-height: var(--title-line-height, 83%);
+  line-height: var(--title-line-height, 82.5%);
   color: var(--title-color, #db00ff);
 }
 
@@ -86,7 +88,7 @@
   content: "";
   position: absolute;
   top: 8px;
-  left: 40px;
+  left: 43px;
   width: 9px;
   height: 9px;
   border-radius: 50%;
@@ -147,7 +149,7 @@
   grid-row: 2;
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
   align-self: center;
-  margin-left: -15px;
+  position: relative;
 }
 
 .header__text {
@@ -156,92 +158,6 @@
   inline-size: var(--header__text-block__inline-size, clamp(22.1875rem, 21.6508rem + 2.2901vw, 22.75rem));
   align-self: center;
   margin-block-end: clamp(1.5625rem, -5.2958rem + 29.2621vw, 8.75rem);
-}
-
-.theme-light {
-  .decorated-zone::before {
-    border-color: var(--decor-color, #353430);
-  }
-
-  .decorated-zone::after {
-    border-color: var(--decor-color, #353430);
-  }
-
-  .decorated-element {
-    display: none;
-  }
-
-  .header__theme-menu-button {
-    color: var(--decor-color, #353430);
-  }
-
-  .header__theme-menu-button:focus-visible {
-    border-block-end: 1px solid currentColor;
-  }
-
-  .header__theme-menu-button:hover {
-    outline: 1px solid rgb(50 49 45 / 0.4);
-  }
-
-  .header__theme-menu-button_active {
-    outline: 1px solid currentColor;
-    pointer-events: none;
-  }
-
-  .section__heading {
-    color: var(--text-color, #353430);
-  }
-
-  .card-text__link:focus-visible {
-    outline: 1px solid currentColor;
-  }
-
-  .card-text__link:hover {
-    border-block-end: 1px solid currentColor;
-  }
-}
-
-.theme-auto {
-  .decorated-zone::before {
-    border-color: var(--decor-color, #353430);
-  }
-
-  .decorated-zone::after {
-    border-color: var(--decor-color, #353430);
-  }
-
-  .decorated-element {
-    display: none;
-  }
-
-  .header__theme-menu-button {
-    color: var(--decor-color, #353430);
-  }
-
-  .header__theme-menu-button:focus-visible {
-    border-block-end: 1px solid currentColor;
-  }
-
-  .header__theme-menu-button:hover {
-    outline: 1px solid rgb(50 49 45 / 0.4);
-  }
-
-  .header__theme-menu-button_active {
-    outline: 1px solid currentColor;
-    pointer-events: none;
-  }
-
-  .section__heading {
-    color: var(--text-color, #353430);
-  }
-
-  .card-text__link:focus-visible {
-    outline: 1px solid currentColor;
-  }
-
-  .card-text__link:hover {
-    border-block-end: 1px solid currentColor;
-  }
 }
 
 .main-content {
@@ -313,14 +229,14 @@
   text-underline-offset: 2px;
 }
 
-.gallary {
-  gap: var(--gallary-gap, clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem));
+.gallery {
+  gap: var(--gallery-gap, clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem));
 }
 
-.gallary__list {
+.gallery__list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--gallary__list-gap, 0.625rem);
+  gap: var(--gallery__list-gap, 0.625rem);
 }
 
 .gallery__image {
@@ -367,8 +283,8 @@
     justify-self: end;
   }
 
-  .section-why__card-list,
-  .section-how__card-list {
+  .content__card-list,
+  .content__card-list {
     padding-inline-start: 5px;
   }
 }
@@ -436,38 +352,38 @@
     grid-row: 2;
   }
 
-  .gallary__heading {
+  .gallery__heading {
     grid-column: 1 / 4;
     grid-row: 1;
   }
 
-  .gallary__list {
+  .gallery__list {
     grid-column: 1 / 4;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 
-  .gallary__list-item:nth-child(1) {
+  .gallery__list-item:nth-child(1) {
     grid-row: 1;
     grid-column: 1 / 3;
   }
 
-  .gallary__list-item:nth-child(2) {
+  .gallery__list-item:nth-child(2) {
     grid-row: 1 / 3;
     grid-column: 3;
   }
 
-  .gallary__list-item:nth-child(3) {
+  .gallery__list-item:nth-child(3) {
     grid-row: 2 / 4;
     grid-column: 1;
   }
 
-  .gallary__list-item:nth-child(4) {
+  .gallery__list-item:nth-child(4) {
     grid-row: 2;
     grid-column: 2;
   }
 
-  .gallary__list-item:nth-child(5) {
+  .gallery__list-item:nth-child(5) {
     grid-row: 3;
     grid-column: 2 / 4;
   }
