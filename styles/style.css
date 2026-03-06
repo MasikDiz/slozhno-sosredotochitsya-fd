@@ -12,7 +12,7 @@
   height: 100vh;
   background-attachment: fixed;
   background-position: bottom;
-  /*overflow-x: hidden;*/ /*не использовать!*/ 
+  /*overflow-x: hidden;*/ /*не использовать!*/
 }
 
 .title-general-styles {
@@ -283,7 +283,6 @@
     justify-self: end;
   }
 
-  .content__card-list,
   .content__card-list {
     padding-inline-start: 5px;
   }
